@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+   --primary-color: #F5CF06;
+   --secondary-color: #8E4106;
+   --white: #ffffff;
+   --space-defacult:70px;
+}
+body{
+   height: 100vh; 
+   background-color: var(--primary-color);
+   display: flex;
+   flex-direction: column;
+   padding-top: var(--space-defacult);
+   padding-right: var(--space-defacult);
+   padding-bottom: 24px;
+   padding-left: var(--space-defacult);
+   
+
+}
+header{
+    background-color: aquamarine;
+    height: 48px;
+}
+main{
+    background-color: tomato;
+    flex-grow: 1;
+}
+footer{
+    background-color: blueviolet;
+}
