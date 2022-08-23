@@ -18,17 +18,83 @@ body{
    padding-right: var(--space-defacult);
    padding-bottom: 24px;
    padding-left: var(--space-defacult);
-   
+   font-family: 'Righteous', cursive;
+
 
 }
-header{
-    background-color: aquamarine;
+header{  
     height: 48px;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    
+}
 main{
-    background-color: tomato;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.pikachu-image{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title{
+    grid-column: 1/-1;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.title__text{
+    font-size: 20vw;
+    color: var(--white);
+}
+.title__transparent{
+    font-size: 24vw;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-30%);
+    color: #ffffff55;
+
+}
+.description{
+    grid-column: 1/7;
+    place-self: center start;
+}
+.description__title{
+    font-size: 4rem;
+    color: var(--secondary-color);
+}
+.description__text{
+    font-size: 1.2rem;
+    width: 500px;
+    color: var(--secondary-color);
+}
+.action{
+    grid-column: 7/-1;
+    place-self: center end;
+    height: 100px;
+    width: 411px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 3rem;
+    text-decoration: none;
+
 }
 footer{
-    background-color: blueviolet;
+    text-align: center;
+    color: var(--secondary-color);
+    
 }
