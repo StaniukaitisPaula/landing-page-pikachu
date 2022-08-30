@@ -121,13 +121,13 @@ footer {
         place-self: start center;
     }
     .description {
-        grid-row: 2/3;
+        grid-row: 2;
         grid-column: 1/-1;
         place-self: center;
         text-align: center;
     }
     .action {
-        grid-row: 2/3;
+        grid-row: 2;
         grid-column: 1/-1;
         place-self: end center;
     }
