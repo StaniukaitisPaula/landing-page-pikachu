@@ -1,52 +1,56 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
-   --primary-color: #F5CF06;
-   --secondary-color: #8E4106;
-   --white: #ffffff;
-   --space-defacult:70px;
-}
-body{
-   height: 100vh; 
-   background-color: var(--primary-color);
-   display: flex;
-   flex-direction: column;
-   padding-top: var(--space-defacult);
-   padding-right: var(--space-defacult);
-   padding-bottom: 24px;
-   padding-left: var(--space-defacult);
-   font-family: 'Righteous', cursive;
 
-
+:root {
+    --primary-color: #F5CF06;
+    --secondary-color: #8E4106;
+    --white: #ffffff;
+    --space-default: 70px;
 }
-header{  
+
+body {
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--space-defacult);
+    padding-right: var(--space-defacult);
+    padding-bottom: 24px;
+    padding-left: var(--space-defacult);
+    font-family: 'Righteous', cursive;
+}
+
+header {
     height: 48px;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
     gap: 16px;
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 2rem;
-    
 }
-main{
+
+main {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
-.pikachu-image{
+
+.pikachu-image {
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.title{
+
+.title {
     grid-column: 1/-1;
     place-self: center;
     display: flex;
@@ -54,32 +58,37 @@ main{
     align-items: center;
     position: relative;
 }
-.title__text{
+
+.title__text {
     font-size: 20vw;
     color: var(--white);
 }
-.title__transparent{
+
+.title__transparent {
     font-size: 24vw;
     position: absolute;
     z-index: -1;
     transform: translateY(-30%);
     color: #ffffff55;
-
 }
-.description{
+
+.description {
     grid-column: 1/7;
     place-self: center start;
 }
-.description__title{
+
+.description__title {
     font-size: 4rem;
     color: var(--secondary-color);
 }
-.description__text{
+
+.description__text {
     font-size: 1.2rem;
     width: 500px;
     color: var(--secondary-color);
 }
-.action{
+
+.action {
     grid-column: 7/-1;
     place-self: center end;
     height: 100px;
@@ -91,10 +100,38 @@ main{
     color: var(--white);
     font-size: 3rem;
     text-decoration: none;
-
 }
-footer{
+
+footer {
     text-align: center;
     color: var(--secondary-color);
-    
+}
+
+@media(max-width:960px) {
+     :root {
+        --space-default: 30px;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+    .pikachu-image {
+        transform: translate(-50%, -60%);
+    }
+    .title {
+        place-self: start center;
+    }
+    .description {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        place-self: center;
+        text-align: center;
+    }
+    .action {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        place-self: end center;
+    }
+    footer {
+        display: none;
+    }
 }
