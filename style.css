@@ -16,10 +16,10 @@ body {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    padding-top: var(--space-defacult);
-    padding-right: var(--space-defacult);
+    padding-top: var(--space-default);
+    padding-right: var(--space-default);
     padding-bottom: 24px;
-    padding-left: var(--space-defacult);
+    padding-left: var(--space-default);
     font-family: 'Righteous', cursive;
 }
 
@@ -133,5 +133,24 @@ footer {
     }
     footer {
         display: none;
+    }
+}
+
+@media (max-width:630px) {
+    .pikachu-image {
+        width: 90vw;
+        transform: translate(-50%, -50%);
+    }
+    .title {
+        transform: translateY(10%);
+    }
+    .description__title {
+        font-size: 10vw;
+    }
+    .description__text {
+        display: none;
+    }
+    .action {
+        width: 100%;
     }
 }
